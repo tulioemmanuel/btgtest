@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class FileProcessorCorrect implements CommandLineRunner {
     
     private static List<String> lines = new ArrayList<>();
-    private static Integer NUM_THREADS = 1; // Número de Threads
+    private static final Integer NUM_THREADS = 1; // Número de Threads
 
     @Override
     public void run(String... args) throws Exception {
@@ -41,6 +41,7 @@ public class FileProcessorCorrect implements CommandLineRunner {
         // Aguarda até as threads finalizarem
         while (!executor.awaitTermination(100, TimeUnit.MILLISECONDS)) {}
 
+        // Como o arquivo foi lido somente por uma thread ele vai mostrar somente as
         System.out.println("Lines processed: " + lines.size());
     }
 }
