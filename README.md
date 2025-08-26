@@ -11,3 +11,5 @@ o ideal seria criar uma constante referênciando o mesmo valor
 
 1) Criei uma solução com ajustes de alguns pontos citados acima
 2) Apesar da sugestão de distribuir a leitura do arquivo pelas threads, a implementação não fora realizada, assim o comportamento reflete à intenção do código original, porém aguardando à finalização das threads
+3) A solução foi implementada usando um código padrão Spring Boot e uma classe CommandLineRunner para executar o exeplo de código com facilidade
+4) Para a execução basta importar o código para alguma IDE IntelliJ ou VS Code, compilar e rodar o jar gerado
